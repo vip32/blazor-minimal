@@ -6,11 +6,11 @@ logevents (raw html)
 
 <button @onclick="Load">Load</button>
 
-@((MarkupString)logEvents)
-
 <p>
     <a href="/">home</a><br />
 </p>
+
+@((MarkupString)logEvents)
 
 @code {
     string logEvents = string.Empty;
