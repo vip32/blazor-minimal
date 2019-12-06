@@ -5,4 +5,8 @@
     <RootNamespace>blazor_minimal</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\components\components.csproj" />
+  </ItemGroup>
+
 </Project>
