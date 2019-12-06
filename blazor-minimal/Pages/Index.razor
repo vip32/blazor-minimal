@@ -1,0 +1,27 @@
+﻿@page "/"
+
+<h3>blazor-minimal</h3>
+
+Hello @Name
+
+<button @onclick="Toggle">Toggle</button>
+
+<p>
+    <a href="/weatherforecast">Weatherforecast API</a>
+</p>
+
+@code {
+    public string Name { get; set; } = "foo";
+
+    protected async Task Toggle()
+    {
+        if (Name == "foo")
+        {
+            Name = "bar";
+        }
+        else
+        {
+            Name = "foo";
+        }
+    }
+}
