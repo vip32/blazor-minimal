@@ -1,0 +1,33 @@
+﻿@page "/logevents"
+
+<h3>blazor-minimal</h3>
+
+logevents (raw html)
+
+<button @onclick="Load">Load</button>
+
+@((MarkupString)logEvents)
+
+<p>
+    <a href="/">home</a><br />
+</p>
+
+@code {
+    string logEvents = string.Empty;
+
+    protected async Task Load()
+    {
+        for (int i = 0; i < 1000; i++)
+        {
+            logEvents += $"test <em>log event</em> [{DateTime.UtcNow.Ticks}]<br/>";
+
+            if (i % 100 == 0 && i != 0) // chunked simulation
+            {
+                StateHasChanged();
+                await Task.Delay(1000);
+            }
+        }
+
+        await Task.CompletedTask;
+    }
+}
