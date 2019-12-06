@@ -1,4 +1,4 @@
-﻿<Router AppAssembly="@typeof(Program).Assembly" AdditionalAssemblies="new[] { typeof(About).Assembly }">
+﻿<Router AppAssembly="@typeof(Program).Assembly" AdditionalAssemblies="new[] { typeof(About).Assembly }"> @* see README to make this more generic (allassemblies) *@
     <Found Context="routeData">
         <RouteView RouteData="@routeData" />
     </Found>
