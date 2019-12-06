@@ -1,6 +1,6 @@
 using System;
 
-namespace blazor_minimal
+namespace web
 {
     public class WeatherForecast
     {

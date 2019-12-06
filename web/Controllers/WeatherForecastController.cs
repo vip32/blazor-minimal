@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace blazor_minimal.Controllers
+namespace web.Controllers
 {
     [ApiController]
     [Route("[controller]")]
